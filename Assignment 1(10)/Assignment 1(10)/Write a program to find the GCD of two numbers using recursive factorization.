@@ -1,0 +1,12 @@
+# Import the math library
+import math
+
+# Define the two numbers
+num1 = 48
+num2 = 18
+
+# Calculate the GCD using math.gcd()
+gcd = math.gcd(num1, num2)
+
+# Print the result
+print(f"GCD of {num1} and {num2} is {gcd}")

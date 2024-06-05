@@ -1,0 +1,7 @@
+num = 1234
+reversednum = 0
+while num != 0:
+    digit = num % 10
+    reversed_num = reversednum * 10 + digit
+    num //= 10
+print("Reversed Number: " + str(reversednum))

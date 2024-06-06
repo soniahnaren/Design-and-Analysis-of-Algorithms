@@ -2,13 +2,9 @@ from collections import Counter
 
 class Solution:
     def lastNonEmptyString(self, s: str) -> str:
-        # Count the frequency of each character in the string
         cnt = Counter(s)
-        # Find the maximum frequency
         mx = cnt.most_common(1)[0][1]
-        # Find the last occurrence of each character
         last = {c: i for i, c in enumerate(s)}
-        # Construct the result string with characters that have the max frequency
         result = "".join(c for i, c in enumerate(s) if cnt[c] == mx and last[c] == i)
         return result
 

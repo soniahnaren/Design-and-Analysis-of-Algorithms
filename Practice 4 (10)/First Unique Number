@@ -1,0 +1,33 @@
+from collections import Counter, OrderedDict
+from typing import List
+
+class FirstUnique:
+    def __init__(self, nums: List[int]):
+        self.c = Counter(nums)
+        self.u = OrderedDict()
+        for num in nums:
+            if self.c[num] == 1:
+                self.u[num] = None
+
+    def showfu(self) -> int:
+        if self.u:
+            return next(iter(self.u))
+        return -1
+
+    def add(self, value: int) -> None:
+        self.c[value] += 1
+        if self.c[value] == 1:
+            self.u[value] = None
+        elif value in self.u:
+            del self.u[value]
+
+# Example usage:
+nums = [2, 3, 5]
+fu = FirstUnique(nums)
+print(fu.showfu())  # Output: 2
+fu.add(5)
+print(fu.showfu())  # Output: 2
+fu.add(2)
+print(fu.showfu())  # Output: 3
+fu.add(3)
+print(fu.showfu())  # Output: -1

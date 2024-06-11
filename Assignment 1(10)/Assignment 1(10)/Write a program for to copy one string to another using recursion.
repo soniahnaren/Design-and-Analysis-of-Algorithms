@@ -12,4 +12,3 @@ def myCopy(s1,s2):
 s1=list("GEEKSFORGEEKS")
 s2=[""]*len(s1)
 print(myCopy(s1,s2))
-'''Code is contributed by RAJAT KUMAR (rajatkumargla19)'''

@@ -1,0 +1,7 @@
+list1=[1,2,4]
+list2=[1,3,4]
+lista=sorted(list1)
+listb=sorted(list2)
+merge=lista+listb
+merged_list=sorted(merge)
+print(merged_list)
